@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "chrono": "cpp",
+        "regex": "cpp",
+        "xstring": "cpp",
+        "xstddef": "cpp"
+    }
+}
