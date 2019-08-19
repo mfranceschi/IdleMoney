@@ -3,6 +3,9 @@
         "chrono": "cpp",
         "regex": "cpp",
         "xstring": "cpp",
-        "xstddef": "cpp"
-    }
+        "xstddef": "cpp",
+        "random": "cpp"
+    },
+    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
+    "cmake.configureOnOpen": true
 }

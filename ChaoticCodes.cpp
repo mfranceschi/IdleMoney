@@ -12,10 +12,11 @@
 void DoPeriodically(const std::function<void(void)>& func, unsigned int interval)
 {
     using namespace std::chrono;
+    using clock_type = std::chrono::steady_clock;
     std::thread([&](){
         while(true)
         {
-            time_point nextTime = steady_clock::now() + milliseconds(interval);
+            time_point<clock_type> nextTime = clock_type::now() + milliseconds(interval);
             func();
             std::this_thread::sleep_until(nextTime);
         }
@@ -37,11 +38,11 @@ std::cmatch ValidateInput(const std::string& input)
 int InheritanceBet(int bet)
 {
     std::bernoulli_distribution boolDistrib(0.1);
-    std::normal_distribution<int> binomDistrib(10, 1);
+    std::normal_distribution<float> normDistrib(10, 1);
     std::default_random_engine engine;
 
     if (boolDistrib(engine))
-        return bet*binomDistrib(engine);
+        return int(bet*normDistrib(engine));
     else
         return 0;
 }

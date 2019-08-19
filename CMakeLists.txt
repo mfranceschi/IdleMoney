@@ -5,5 +5,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)  # The C++11 standard must be set
 
 # # # The project itself # # #
 # It does not contains any other subdir with a CMakeLists.txt file so no need to do "add_subdirectory"
-add_executable(${PROJECT_NAME})  # Sets the executable name. Here it is the same as the project name.
-target_include_directories(${PROJECT_NAME} PRIVATE extlibs/PDCurses-3.8/)  # (normally) adds the PDCurses lib folder to include path
+file(GLOB CPPFILES *.cpp)
+add_executable(${PROJECT_NAME} ${CPPFILES})  # Sets the executable name and all source files that need to be looked at by CMake.
+target_include_directories(${PROJECT_NAME} PUBLIC extlibs/)  # (normally) adds the PDCurses lib folder to include path
