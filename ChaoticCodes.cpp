@@ -5,6 +5,7 @@
 #include <string>
 #include <regex>
 #include <random>
+#include <PDCurses/curses.h>
 
 // Creates a new thread that performs a periodic action.
 // "func" is what to do and "interval" is the time period.
@@ -37,12 +38,27 @@ std::cmatch ValidateInput(const std::string& input)
 // Returns the value to add to the user's money account.
 int InheritanceBet(int bet)
 {
-    std::bernoulli_distribution boolDistrib(0.1);
+    unsigned int seed = std::chrono::system_clock::now().time_since_epoch().count();
+    std::bernoulli_distribution boolDistrib(0.5);
     std::normal_distribution<float> normDistrib(10, 1);
-    std::default_random_engine engine;
+    std::minstd_rand engine(seed);  // Speed > quality here.
 
     if (boolDistrib(engine))
         return int(bet*normDistrib(engine));
     else
         return 0;
+}
+
+void TestCurses()
+{
+    WINDOW* win = initscr();
+    clear();
+    move(1, 10); /* Move to 2nd line and let 10 white spaces behind. */
+    addstr("Input your name");
+    refresh();
+    char input[250];
+    getnstr(input, 250);
+    addstr("OK!");
+    getch();
+    endwin();
 }

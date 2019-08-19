@@ -1,2 +1,4 @@
 # TODO
 build
+*.obj
+*.lib

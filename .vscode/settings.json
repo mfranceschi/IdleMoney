@@ -4,7 +4,9 @@
         "regex": "cpp",
         "xstring": "cpp",
         "xstddef": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "functional": "cpp",
+        "thread": "cpp"
     },
     "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
     "cmake.configureOnOpen": true
