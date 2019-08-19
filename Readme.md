@@ -21,11 +21,18 @@ This repo is just a demonstration of my work and does not have the purpose of be
 
 ## Interface samples
 
+### Example 1
+
 ```{shell}
 ==================== IDLE MONEY ====================
-Current money: 476.6M       Money/s: 819.0K
+Current money: $476.6M       Money/s: 819.0K
 
 What's next?:
 
 Congrats, you won 200.0M with Mr Johnson's legacy!
 ```
+
+On the previous example, the player has `476.6 * 10^6` dollars.
+He/she earns `819.0 * 10^3` dollars per seconds.
+He/she wrote no next command.
+He/she won some money from legacy a few seconds ago.
