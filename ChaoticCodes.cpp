@@ -26,12 +26,12 @@ void DoPeriodically(const std::function<void(void)>& func, unsigned int interval
 
 // Compares the input string to regex.
 // Returns the resulting "regex_match" object.
-std::cmatch ValidateInput(const std::string& input)
+std::cmatch ValidateInput(const char* input)
 {
-    const char* pattern_cstring = R"regex(buy \d|bet \d|quit)regex";
+    const char* pattern_cstring = R"regex((b(?:uy|et)) (\d+))regex";
     std::regex pattern(pattern_cstring);
     std::cmatch results;
-    std::regex_match(input.c_str(), results, pattern);
+    std::regex_match(input, results, pattern);
     return results;
 }
 

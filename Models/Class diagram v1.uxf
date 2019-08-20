@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>360</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>*Display*
+--
+- cur_money: string
+- cur_income: string
+- last_input: string
+- inheritance: string
+- (PDCurses stuff)
+--
++ SetMoney(int)
++ SetIncome(int)
++ SetInheritance(string, int)
++ SetSecondStep(int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>230</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*DisplayFactory*
+--
+--
+_+ GetInstance(): Display_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>280</y>
+      <w>90</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+r2=_- instance_</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>370</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>*Player*
+--
++ ID: int
+- cur_money: int
+- cur_income: int
+- nbr_stores: int
+--
++ Buy() : boolean
++ Bet(int): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
