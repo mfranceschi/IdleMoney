@@ -20,6 +20,6 @@ set_target_properties(
 )
 
 # The final project
-file(GLOB CPPFILES *.cpp)
+file(GLOB CPPFILES src/*.cpp)
 add_executable(${PROJECT_NAME} ${CPPFILES} ${PDCURSESFILES})  # Sets the executable name and all source files that need to be looked at by CMake.
 target_link_libraries(${PROJECT_NAME} curseslib)

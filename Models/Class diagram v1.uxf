@@ -68,4 +68,22 @@ r2=_- instance_</panel_attributes>
 + Bet(int): int</panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1050</x>
+      <y>380</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>*RandomService*
+--
+- engine: random engine generator
+- boolGen: bernoulli distribution
+- normGen: normal distribution
+--
++ Bet(int): int
++ SetSeed(int)</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>
