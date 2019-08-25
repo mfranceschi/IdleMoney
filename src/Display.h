@@ -15,6 +15,12 @@ public:
     void SetInheritance(money_t); // Sets inheritance (non-mandatory).
     void SetSecondStep(money_t); /* wut */
 
+    Display();
+    ~Display();
+
+    /* Signals coming from user input */
+    const int SIG_STOP = 1;
+
 protected:
     string cur_money;
     string cur_income;
