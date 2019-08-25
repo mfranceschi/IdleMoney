@@ -6,8 +6,9 @@
         "xstddef": "cpp",
         "random": "cpp",
         "functional": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "iosfwd": "cpp",
+        "sstream": "cpp"
     },
-    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
     "cmake.configureOnOpen": true
 }

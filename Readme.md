@@ -17,7 +17,7 @@ This repo is just a demonstration of my work and does not have the purpose of be
 * The amount of money and the amount of stores are always displayed on the screen.
 * The player can type commands on the keyboard and what is typen is displayed.
 * The last player's validated input is displayed on screen during 5 seconds at max.
-* The game stops when the player reaches $B999 or when the player presses Ctrl+D.
+* The game stops when the player reaches $999B or when the player presses Ctrl+D.
 
 ## Interface samples
 
@@ -25,7 +25,7 @@ This repo is just a demonstration of my work and does not have the purpose of be
 
 ```{shell}
 ==================== IDLE MONEY ====================
-Current money: $476.6M       Money/s: 819.0K
+Current money: $476.6M       Money/s: $819.0K
 
 What's next?:
 
