@@ -29,7 +29,7 @@ Current money: $476.6M       Money/s: $819.0K
 
 What's next?:
 
-Congrats, you won 200.0M with Mr Johnson's legacy!
+Congrats, you won 200.0M from someone's legacy!
 ```
 
 On the previous example, the player has `476.6 * 10^6` dollars.

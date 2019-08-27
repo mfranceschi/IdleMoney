@@ -1,10 +1,14 @@
 #include <iostream>
-#include "Motherboard.h"
+#include "Display.h"
 
 int main(int args, char ** argc)
 {
-	Motherboard * mb = new Motherboard;
-	delete mb;
+	Display * d = new Display;
+	d->WaitForInput();
+	d->SetMessage(737);
+	d->SetMoney(123);
+	d->WaitForInput();
+	delete d;
 	int nbr;
 	std::cin >> nbr;
 	return EXIT_SUCCESS;
