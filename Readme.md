@@ -25,7 +25,7 @@ This repo is just a demonstration of my work and does not have the purpose of be
 
 ```{shell}
 ==================== IDLE MONEY ====================
-Current money: $476.6M       Money/s: $819.0K
+Current money: $476.6M        Money/s: $819.0K
 
 What's next?:
 

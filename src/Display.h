@@ -1,11 +1,15 @@
+#pragma once
 #include <string>
 
 #include <PDCurses/curses.h>
 
 #include "Globals.h"
 
+class Motherboard;
+
 class Display
 {
+    friend class Motherboard;
     using string = std::string;
 public:
 
@@ -34,6 +38,4 @@ protected:
     string cur_income;
     string last_input;
     string message;
-
-    const static string MSG_FOR_INHERITANCE;
 };

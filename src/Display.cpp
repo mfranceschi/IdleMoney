@@ -1,12 +1,11 @@
 #include <algorithm>
 #include <sstream>
 
+#include "Motherboard.h"
 #include "Display.h"
 
 constexpr static money_t operator"" _mt(unsigned long long integer)
 {return money_t(integer);}
-
-const std::string Display::MSG_FOR_INHERITANCE = "Congrats, you won %s from someone's legacy!";
 
 Display::Display() 
 {
@@ -14,9 +13,13 @@ Display::Display()
     move(0, 0);
     printw("==================== IDLE MONEY ====================");
     move(1, 0);
-    printw("Current money: $476.6M       Money/s: $819.0K");
+    printw("Current money: $0             Money/s: $0");
+    move(2, 0);
+    printw("----------------------------------------------------");
     move(3, 0);
     printw("What's next?: ");
+    move(5, 0);
+    printw("====================================================");
 
     refresh();
 }
@@ -33,12 +36,14 @@ std::string Display::GetLastInput() const
 
 void Display::WaitForInput()
 {
+    noecho();
     getch();
+    echo();
 }
 
 void Display::SetMoney(money_t money)
 {
-    move(1, 15); /* TODO */
+    move(1, 15);
     cur_money = mtos(money);
     printw("        ");
     move(1, 15);
@@ -48,10 +53,10 @@ void Display::SetMoney(money_t money)
 
 void Display::SetIncome(money_t money)
 {
-    move(1, 999); /// TODO
+    move(1, 30);
     cur_income = mtos(money);
     printw("      ");
-    move(1, 999);
+    move(1, 30);
     printw(cur_income.c_str());
     refresh();
 }
@@ -59,7 +64,7 @@ void Display::SetIncome(money_t money)
 void Display::SetMessage(money_t money)
 {
     char buf [100];
-    std::snprintf(buf, 100, MSG_FOR_INHERITANCE.c_str(), mtos(money).c_str());
+    std::snprintf(buf, 100, Motherboard::MSG_FOR_INHERITANCE.c_str(), mtos(money).c_str());
     SetMessage(buf);
 }
 

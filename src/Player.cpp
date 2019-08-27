@@ -10,9 +10,11 @@ Player::Player() :
     rand.SetSeedTimestamp();
 }
 
-void Player::Buy()
+void Player::Buy(money_t price, money_t new_income)
 {
-
+    cur_money -= price;
+    cur_income = new_income;
+    ++nbr_stores;
 }
 
 money_t Player::Bet(money_t amount)

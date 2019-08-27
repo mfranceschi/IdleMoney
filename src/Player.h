@@ -8,7 +8,7 @@ class Player
 public:
     const int ID;
 
-    void Buy(); // Try to buy the next store.
+    void Buy(money_t price, money_t new_income); // Buys a new store
     money_t Bet(money_t); // Bet some money: spends it and returns the eventual amount.
     void ApplyTheIncomes(); // Add cur_income to cur_money.
     bool CanSpend(money_t) const; // Indicated whether player can spend that money.
